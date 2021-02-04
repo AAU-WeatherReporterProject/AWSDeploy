@@ -6,7 +6,7 @@ git clone https://github.com/AAU-WeatherReporterProject/WeatherReporterBackend.g
 git clone https://github.com/AAU-WeatherReporterProject/FrontendWebsite.git
 
 sudo mv FrontendWebsite/ /var/www/html/
-sed 's,/var/www/html,/var/www/html/FrontendWebsite/target/dist' /etc/nginx/sites-available/default
+sudo sed 's,/var/www/html,/var/www/html/FrontendWebsite/target/dist,g' /etc/nginx/sites-available/default
 sudo systemctl restart nginx
 
 sudo mv WeatherReporterBackend/src/main/java/at/aau/projects/weatherreporter/rest/jar/weather-reporter-0.0.1-SNAPSHOT.jar ./
